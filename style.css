@@ -126,6 +126,7 @@ body {
     transform-origin: center;
     transform: rotate(136deg);
     z-index: 1;
+    display: none;
 }
 
 .vol {
@@ -229,6 +230,7 @@ body {
     cursor: pointer;
     transition: all 0.2s;
 }
+
 
 .line {
     width: 0;

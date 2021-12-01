@@ -95,6 +95,19 @@ function playPause() {
         } else {
             playSong();
             timeLine.style.top = '-7px';
+            timeLine.addEventListener('mousemove', () => {
+                timeLine.style.top = '-3px';
+                clearTimeout(t);
+            })
+            timeLine.addEventListener('mouseout', () => {
+                timeLine.style.top = '-7px';
+            })
+//            if (onmousemove == true) {
+//                timeLine.style.top = '-3px';
+//            } else {
+//                timeLine.style.top = '-7px';
+//            }
+            
         }
     })
 }
@@ -134,6 +147,13 @@ function timeProgressUpdate() {
     }
     
 }
+//function videoChangeTime(e) {
+//    let mouseX = Math.floor(е.pageX - timeLine.offsetLeft);
+//    let progress = mouseX / (timeLine.offsetWidth / 100);
+//    audio.currentTime = audio.duration * (progress / 100);
+//}
+//timeLine.addEventListener('click', videoChangeTime);
+
 
 timeProgressUpdate();
 
