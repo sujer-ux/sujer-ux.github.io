@@ -130,25 +130,25 @@ function timeProgressUpdate() {
         let c = audio.currentTime;
         let x = timeProgress.style.width = (100 * c) / d + '%';
         currentTimeTime();
-        durationTime();
+//        durationTime();
     }
     
 }
 
 timeProgressUpdate();
 
-function durationTime() {
-    let timeStamp = audio.duration;
-    let minutes = Math.floor(timeStamp / 60);
-    let seconds = Math.floor(timeStamp % 60);
-    let formatted = [
-        minutes.toString().padStart (2, '0'),
-        seconds.toString().padStart (2, '0')
-    ].join(':');
-
-    const durationBlock = document.querySelector('.duration');
-    durationBlock.innerHTML = formatted;
-}
+//function durationTime() {
+//    let timeStamp = audio.duration;
+//    let minutes = Math.floor(timeStamp / 60);
+//    let seconds = Math.floor(timeStamp % 60);
+//    let formatted = [
+//        minutes.toString().padStart (2, '0'),
+//        seconds.toString().padStart (2, '0')
+//    ].join(':');
+//
+//    const durationBlock = document.querySelector('.duration');
+//    durationBlock.innerHTML = formatted;
+//}
 
 
 function currentTimeTime() {
