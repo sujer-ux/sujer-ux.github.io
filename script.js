@@ -91,22 +91,12 @@ function playPause() {
         if (isPlaying) {
             pauseSong();
             timeLine.style.top = '-13px';
+            audio.style.display = 'none';
             
         } else {
             playSong();
             timeLine.style.top = '-7px';
-            timeLine.addEventListener('mousemove', () => {
-                timeLine.style.top = '-3px';
-            })
-            timeLine.addEventListener('mouseout', () => {
-                timeLine.style.top = '-7px';
-            })
-//            if (onmousemove == true) {
-//                timeLine.style.top = '-3px';
-//            } else {
-//                timeLine.style.top = '-7px';
-//            }
-            
+            audio.style.display = 'block';
         }
     })
 }

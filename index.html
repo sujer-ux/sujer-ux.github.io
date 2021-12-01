@@ -8,15 +8,17 @@
 </head>
 <body >
    <div class="wallpaper">
+       <div class="album">EP (Extended Play)</div>
         <div class="wrapper">
            <div class="time-line" id="timeLine">
                <div class="line" id="timeProgress"></div>
+                    <audio controls id="audio" class="audio">
+                        <source src="audio.mp3" type="audio/mpeg">
+                    </audio>
                <div class="duration">01:47</div>
                <div class="current">00:00</div>
            </div>
-            <audio controls id="audio" class="audio">
-                <source src="audio.mp3" type="audio/mpeg">
-            </audio>
+
             <div class="vol">
                 <svg class="vol-ring">
                     <circle class="volume-circle" id="circle-volume" r="32" stroke-linecap="round"/>
