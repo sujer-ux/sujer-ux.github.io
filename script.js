@@ -97,7 +97,6 @@ function playPause() {
             timeLine.style.top = '-7px';
             timeLine.addEventListener('mousemove', () => {
                 timeLine.style.top = '-3px';
-                clearTimeout(t);
             })
             timeLine.addEventListener('mouseout', () => {
                 timeLine.style.top = '-7px';
@@ -147,15 +146,20 @@ function timeProgressUpdate() {
     }
     
 }
-//function videoChangeTime(e) {
-//    let mouseX = Math.floor(е.pageX - timeLine.offsetLeft);
-//    let progress = mouseX / (timeLine.offsetWidth / 100);
-//    audio.currentTime = audio.duration * (progress / 100);
-//}
-//timeLine.addEventListener('click', videoChangeTime);
-
-
 timeProgressUpdate();
+
+timeLine.onclick = audioRew();
+
+function audioRew() {
+        let w = this.offsetWidth;
+        let o = timeLine.event.offsetX;
+        this.value = o/w*100;
+        audio.pause();
+        audio.currentTime = audio.duration * o/w;
+        audio.play();
+    
+}
+
 
 //function durationTime() {
 //    let timeStamp = audio.duration;
