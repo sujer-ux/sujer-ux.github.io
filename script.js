@@ -9,6 +9,8 @@ const playBtn = document.querySelector('.play-pause')
 const timeLine = document.getElementById('timeLine');
 const timeProgress = document.getElementById('timeProgress');
 
+
+durationTime();
 function rotate() {
     let val = rangeInp.value;
     let valProc = ((val - 45) / 270) * 100;
@@ -146,7 +148,7 @@ function durationTime() {
     const durationBlock = document.querySelector('.duration');
     durationBlock.innerHTML = formatted;
 }
-durationTime();
+
 
 function currentTimeTime() {
     let timeStamp = audio.currentTime;
