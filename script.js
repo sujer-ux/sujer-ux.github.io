@@ -10,7 +10,7 @@ const timeLine = document.getElementById('timeLine');
 const timeProgress = document.getElementById('timeProgress');
 
 
-durationTime();
+
 function rotate() {
     let val = rangeInp.value;
     let valProc = ((val - 45) / 270) * 100;
@@ -130,6 +130,7 @@ function timeProgressUpdate() {
         let c = audio.currentTime;
         let x = timeProgress.style.width = (100 * c) / d + '%';
         currentTimeTime();
+        durationTime();
     }
     
 }
