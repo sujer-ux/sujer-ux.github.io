@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="wallpaper">
+        <div class="wrapper">
+           <div class="time-line" id="timeLine">
+               <div class="line" id="timeProgress"></div>
+               <div class="duration"></div>
+               <div class="current">00:00</div>
+           </div>
+            <audio controls id="audio" class="audio">
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+            <div class="vol">
+                <svg class="vol-ring">
+                    <circle class="volume-circle" id="circle-volume" r="32" stroke-linecap="round"/>
+                    <circle class="vol-ring-circle" id="circle" r="32" stroke-linecap="round"/>
+                    <circle class="back-circle" id="circle" r="32" />
+                </svg>
+                <div class="rangeTrans">
+                    <div class="rangeBlock">
+                            <input type="range" class="range" id="range" class = "style-slider slider-progress" value="180" min="45" max="315" oninput="rotate()">
+                    </div>
+                </div>
+                <div class="fader" id="fade"></div>
+            </div>
+            <div class="value" id="rot-value"></div>
+            <div class="play-pause"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
