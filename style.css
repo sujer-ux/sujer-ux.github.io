@@ -66,7 +66,7 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3C!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 244.5 244.5' style='enable-background:new 0 0 244.5 244.5;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0{fill:%23D1D1D1;} %3C/style%3E%3Cg%3E%3Cpath class='st0' d='M123.3,123.3c0,23.5,0,47.1,0,70.6c0,5,0.7,10.6-4.9,13.3c-6.2,3-10.3-1.4-14.2-5.3 c-12.3-12.1-24.7-24.1-36.5-36.6c-6-6.3-12.4-8.9-21.1-8.8c-22.8,0-30.6-8-30.8-30.1c-0.3-29.6,4.7-35,34.7-36.3 c6.4-0.3,11.1-2.8,15.4-7.2C78.4,70,91.2,57.3,104.1,44.6c3.9-3.8,8-8.2,14.2-5.2c5.6,2.7,4.9,8.3,4.9,13.3 C123.3,76.2,123.3,99.7,123.3,123.3z'/%3E%3Cpath class='st0' d='M147.1,82.6c3.3-2.5,7.8-2.7,11.7-1.1c0.7,0.3,1.3,0.6,2,0.9c2.7,1.5,4.2,3.3,4.8,4 c11.4,12.4,17.1,18.6,20.7,18.5c2.8-0.1,8.4-6.4,19.6-18.9c0.4-0.4,1.7-1.8,3.8-3.3c5.1-3.6,10.3-3.9,15,0.5 c5.1,4.7,5.5,10.5,1.2,15.8c-3.6,4.5-6.4,7.7-13.9,14.5c-5.4,4.9-8.1,7.4-8.1,9.5c0,1.9,1.1,3.3,7.8,9.5c7.6,7.1,9.7,9.4,13.3,13.5 c4.7,5.4,5.7,11.4,0.2,16.9s-11.5,4.4-16.9-0.4c-3.1-2.7-6.4-5.2-12.6-12.4c-6.8-7.9-7.8-9.9-10.2-9.9s-3.3,2-9.7,9.5 c-6.7,7.8-10,10.2-12.5,12.4c-5.8,5.2-12.1,6.4-17.8,0.2c-5.3-5.7-3.6-11.6,1.1-16.9c3.5-3.8,5.2-5.6,11.6-11.6 c7.5-7.1,9-9.1,9.2-10.5c0.1-0.3,0-0.6,0-0.6s0-0.2,0-0.5c-0.4-2.8-9.6-10.2-9.6-10.2c-3.5-2.8-6-5-10.2-10c-1-1.2-1.8-2.4-2.8-3.7 C140.9,92.9,142.4,86.2,147.1,82.6z'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 10%;
     background-repeat: no-repeat;
-    background-position: 50.5% 26.5%;
+    background-position: 50.5% 26.6%;
 }
 
 .fader {
@@ -86,21 +86,21 @@ body {
 /*    border: 6px solid rgb(38, 100, 50);*/
 /*    border: 6px solid rgb(62, 74, 159);*/
     border: 5px solid rgb(54, 72, 203);
-    overflow: hidden;
+/*    overflow: hidden;*/
     transform: rotate(0deg);
 }
 
 .fader::after {
     content: " ";
     display: block;
-    width: 8px;
-    height: 26px;
+    width: 7px;
+    height: 14px;
 /*    background-color: #cccccc;*/
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.27);
     position: absolute;
-    top: -12px;
-    left: calc(50% - 4px);
-    border-radius: 5px;
+    top: 1.2px;
+    left: calc(50% - 3.5px);
+    border-radius: 4px 4px 5px 5px;
 }
 
 
@@ -305,3 +305,13 @@ body {
 }
 
 
+
+#muteBlock {
+    position: absolute;
+    top: 73px;
+    width: 29px;
+    height: 29px;
+    opacity: 0.3;
+    border-radius: 15px;
+    cursor: pointer;
+}

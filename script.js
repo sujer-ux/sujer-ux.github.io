@@ -8,12 +8,24 @@ const wrapper = document.querySelector('.wrapper');
 const playBtn = document.querySelector('.play-pause')
 const timeLine = document.getElementById('timeLine');
 const timeProgress = document.getElementById('timeProgress');
-
+const muteBlock = document.getElementById('muteBlock');
 
 
 function rotate() {
-    let val = rangeInp.value;
-    let valProc = ((val - 45) / 270) * 100;
+    let val_l = rangeInp.value;
+    let val = val_l;
+//    if (val_l >= 165 & val_l <= 194) {
+//        val = 180;
+//    } else {
+//        val = val_l;
+//    }
+    let valProc_c = ((val - 45) / 270) * 100;
+    let valProc = valProc_c;
+//    if (valProc_c >= 45 & valProc_c <= 55) {
+//        valProc = 50;
+//    } else {
+//        valProc = valProc_c;
+//    }
     fader.style.transform = 'rotate(' + (val - 180) + 'deg)';
     rangeInp.addEventListener('mouseup', () => {
          rangeTrans.style.transform = 'translateY(' + ((valProc - 50) / 2 / 1.32) + 'vh)';
@@ -31,13 +43,25 @@ function rotate() {
     }
     circleRotate();
     rotValue.innerHTML = Math.trunc(valProc) + '%';
+//    rotValue.innerHTML = Math.trunc(val) + 'deg';
     function setValue() {
         let value = valProc / 100;
         audio.volume = value;
-        if (value == 0) {
+        if (audio.volume == 0) {
             wrapper.classList.add('wrapper-mute');
         } else {
             wrapper.classList.remove('wrapper-mute');
+        }
+        if (audio.volume == 0) {
+            muteBlock.addEventListener('click', () => {
+                val = val + 4;
+                wrapper.classList.remove('wrapper-mute');
+            });
+        } else {
+            muteBlock.addEventListener('click', () => {
+                audio.volume = 0;
+                wrapper.classList.add('wrapper-mute');
+            }); 
         }
     }
     setValue();    
@@ -91,12 +115,12 @@ function playPause() {
         if (isPlaying) {
             pauseSong();
             timeLine.style.top = '-13px';
-            audio.style.display = 'none';
+//            audio.style.display = 'none';
             
         } else {
             playSong();
             timeLine.style.top = '-7px';
-            audio.style.display = 'block';
+//            audio.style.display = 'block';
         }
     })
 }
@@ -138,11 +162,11 @@ function timeProgressUpdate() {
 }
 timeProgressUpdate();
 
-timeLine.onclick = audioRew();
+timeLine.onclick = audioRew;
 
 function audioRew() {
         let w = this.offsetWidth;
-        let o = timeLine.event.offsetX;
+        let o = event.offsetX;
         this.value = o/w*100;
         audio.pause();
         audio.currentTime = audio.duration * o/w;
